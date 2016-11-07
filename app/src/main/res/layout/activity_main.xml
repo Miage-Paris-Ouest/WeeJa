@@ -8,10 +8,52 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="projet.holo_holo.weeja.MainActivity">
+    tools:context="projet.holo_holo.weeja.controller_view.MainActivity"
+    android:background="@drawable/imageaccueil">
+
 
     <TextView
+        android:text="WeeJa"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="35dp"
+        android:id="@+id/titreAccueil"
+
+        android:fontFamily="serif"
+        android:typeface="serif"
+        android:textSize="36sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:lineSpacingExtra="10sp"
+        android:textColor="@android:color/background_light"
+        android:textStyle="normal|bold"
+        android:textAlignment="center" />
+
+    <Button
+        android:text="Sign Up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:id="@+id/boutonSignUp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:elevation="0dp"
+        android:background="@android:color/holo_orange_light"
+        android:textColor="@android:color/background_light" />
+
+    <Button
+        android:text="Sign In"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/boutonSignIn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="@android:color/holo_orange_light"
+        android:textColor="@android:color/background_light"
+        android:elevation="13dp"
+        android:layout_alignBaseline="@+id/boutonSignUp"
+        android:layout_alignBottom="@+id/boutonSignUp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
