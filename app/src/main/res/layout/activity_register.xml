@@ -17,7 +17,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="89dp"
-        android:id="@+id/boutonRegister"
+        android:id="@+id/buttonRegister"
         android:background="@color/colorAccent"
         android:textColor="@android:color/background_light" />
 
@@ -25,21 +25,21 @@
         android:text="Your Email :"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
+        android:id="@+id/textViewEmail"
         android:textColor="@color/colorAccent"
         android:textSize="18sp"
         android:layout_marginBottom="42dp"
-        android:layout_above="@+id/editText2"
+        android:layout_above="@+id/editTextPassword"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
+        android:layout_alignRight="@+id/textViewPassword"
+        android:layout_alignEnd="@+id/textViewPassword" />
 
     <TextView
         android:text="Your Password :"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
+        android:id="@+id/textViewPassword"
         android:textSize="18sp"
         android:textColor="@color/colorAccent"
         android:layout_centerVertical="true"
@@ -51,7 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
-        android:id="@+id/textView3"
+        android:id="@+id/textViewTitre"
         android:textColor="@color/colorAccent"
         android:textSize="30sp"
         android:layout_alignParentTop="true"
@@ -62,12 +62,12 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/editTextEmail"
         android:hint="@string/prompt_email"
         android:singleLine="true"
         android:textAlignment="center"
-        android:layout_alignBaseline="@+id/textView"
-        android:layout_alignBottom="@+id/textView"
+        android:layout_alignBaseline="@+id/textViewEmail"
+        android:layout_alignBottom="@+id/textViewEmail"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -76,12 +76,12 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/editTextPassword"
         android:hint="@string/prompt_password"
         android:singleLine="true"
         android:textAlignment="center"
-        android:layout_alignBaseline="@+id/textView2"
-        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignBaseline="@+id/textViewPassword"
+        android:layout_alignBottom="@+id/textViewPassword"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 </RelativeLayout>
