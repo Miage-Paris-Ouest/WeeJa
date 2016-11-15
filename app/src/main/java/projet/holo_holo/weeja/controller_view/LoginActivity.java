@@ -30,11 +30,14 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import projet.holo_holo.weeja.R;
+import projet.holo_holo.weeja.database.UserManager;
+import projet.holo_holo.weeja.model.User;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -91,7 +94,15 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
+                /*UserManager um = new UserManager(getApplicationContext());
+
+                if(um.getUser(mEmailView.getText().toString())==null){
+                    Toast.makeText(getApplicationContext(), "INVALID EMAIL OR PASSWORD",
+                            Toast.LENGTH_LONG).show();
+                }
+                else {*/
                 attemptLogin();
+                //}
             }
         });
 
@@ -187,17 +198,15 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             // form field with an error.
             focusView.requestFocus();
         } else {
-            // Show a progress spinner, and kick off a background task to
-            // perform the user login attempt.
-            showProgress(true);
-            mAuthTask = new UserLoginTask(email, password);
-            mAuthTask.execute((Void) null);
+                // Show a progress spinner, and kick off a background task to
+                // perform the user login attempt.
+                showProgress(true);
+                mAuthTask = new UserLoginTask(email, password);
+                mAuthTask.execute((Void) null);
 
-            Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
-            startActivity(intent);
-        }
-
-
+                Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
     }
 
     private boolean isEmailValid(String email) {

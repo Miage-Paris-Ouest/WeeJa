@@ -40,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                 um.close();
 
-                Toast.makeText(getApplicationContext(), "Account Registered",
+                Toast.makeText(getApplicationContext(), "ACCOUNT RESGISTERED",
                         Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
