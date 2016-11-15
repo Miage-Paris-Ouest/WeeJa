@@ -12,3 +12,7 @@ Dépôt du projet Weekend Just Ahead:
 TRIP ADVISOR API:
 <a href="https://developer-tripadvisor.com/content-api/documentation/">TripAdvisor</a>
 
+### Use Case ###
+
+![](https://github.com/Miage-Paris-Ouest/WeeJa/blob/master/Dossier%20Fonctionnel/WeeJa%20UseCase.png)
+
