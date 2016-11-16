@@ -89,7 +89,7 @@ TRIP ADVISOR API:
 }
     
 
-Response Restaurant (TripAdvisor API) 
+### Response Restaurant (TripAdvisor API) 
 
 {
       "see_all_photos": "http://www.tripadvisor.com/LocationPhotos-g60745-d4225110-mMCID-Chacho_s_Pizza_Subs-Boston_Massachusetts.html",
