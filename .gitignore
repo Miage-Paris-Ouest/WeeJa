@@ -15,3 +15,5 @@
 .idea/vcs.xml
 .gradle
 .gradle/
+app.iml
+app/app.iml
