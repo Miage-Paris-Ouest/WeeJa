@@ -44,4 +44,22 @@ public class User {
     public HashSet<Favorite> getListeFavorites() {
         return listeFavorites;
     }
+
+    public Boolean emailValid(){
+        if(this.email.contains("@")){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public Boolean passwordValid(){
+        if(this.password.length() > 4){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
