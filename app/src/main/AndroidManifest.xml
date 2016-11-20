@@ -13,7 +13,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".controller_view.MainActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
@@ -23,17 +22,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".controller_view.LoginActivity"
             android:label="@string/title_activity_login" />
-
         <activity android:name=".controller_view.RegisterActivity" />
-
         <activity
             android:name=".controller_view.MenuActivity"
             android:label="@string/title_activity_menu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".controller_view.WeekendActivity"
+            android:label="@string/title_activity_weekend"
+            android:parentActivityName=".controller_view.MenuActivity"
             android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projet.holo_holo.weeja.controller_view.MenuActivity" />
         </activity>
     </application>
 
