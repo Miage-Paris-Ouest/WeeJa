@@ -32,7 +32,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".controller_view.WeekendActivity"
-            android:label="@string/title_activity_weekend"
+            android:label="Mon WeekEnd"
             android:parentActivityName=".controller_view.MenuActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -41,12 +41,21 @@
         </activity>
         <activity
             android:name=".controller_view.AccountActivity"
-            android:label="@string/title_activity_account"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Mon Compte"
+            android:parentActivityName=".controller_view.MenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projet.holo_holo.weeja.controller_view.MenuActivity" />
+        </activity>
         <activity
-            android:name=".controller_view.FavoritActivity"
-            android:label="@string/title_activity_favorit"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:name=".controller_view.FavoriteActivity"
+            android:label="Mes Favoris"
+            android:parentActivityName=".controller_view.MenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projet.holo_holo.weeja.controller_view.MenuActivity" />
+        </activity>
+        <activity android:name=".controller_view.PackageWeekend"></activity>
     </application>
 
 </manifest>
