@@ -81,9 +81,11 @@ public class MenuActivity extends AppCompatActivity
             Intent i_weekend = new Intent(getApplicationContext(),WeekendActivity.class);
             startActivity(i_weekend);
         } else if (id == R.id.nav_compte) {
-
+            Intent i_acc = new Intent(getApplicationContext(),AccountActivity.class);
+            startActivity(i_acc);
         } else if (id == R.id.nav_favoris) {
-
+            Intent i_fav = new Intent(getApplicationContext(),FavoritActivity.class);
+            startActivity(i_fav);
         } else if (id == R.id.nav_deconnection) {
 
         }

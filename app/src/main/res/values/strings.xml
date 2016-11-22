@@ -21,5 +21,7 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_weekend">WeekendActivity</string>
+    <string name="title_activity_account">AccountActivity</string>
+    <string name="title_activity_favorit">FavoritActivity</string>
 
 </resources>

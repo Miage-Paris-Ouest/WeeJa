@@ -17,6 +17,6 @@
         <item
             android:id="@+id/nav_deconnection"
             android:icon="@android:drawable/ic_lock_power_off"
-            android:title="Déconnection" />
+            android:title="Déconnexion" />
     </group>
 </menu>
