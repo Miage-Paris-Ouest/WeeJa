@@ -84,7 +84,7 @@ public class MenuActivity extends AppCompatActivity
             Intent i_acc = new Intent(getApplicationContext(),AccountActivity.class);
             startActivity(i_acc);
         } else if (id == R.id.nav_favoris) {
-            Intent i_fav = new Intent(getApplicationContext(),FavoritActivity.class);
+            Intent i_fav = new Intent(getApplicationContext(),FavoriteActivity.class);
             startActivity(i_fav);
         } else if (id == R.id.nav_deconnection) {
 
