@@ -31,7 +31,7 @@
         android:src="@drawable/cadeau"/>
 
     <TextView
-        android:text="Découvrer votre Week-End"
+        android:text="Découvrez votre Week-End"
         android:layout_width="187dp"
         android:layout_height="90dp"
         android:layout_gravity="bottom"

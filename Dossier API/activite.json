@@ -1,0 +1,75 @@
+{
+      "see_all_photos": "http://www.tripadvisor.com/LocationPhotos-g60745-d3546275-mMCID-Diablo_Glass_School-Boston_Massachusetts.html",
+      "attraction_types": [
+        {
+          "localized_name": "Classes/Workshops",
+          "name": "classes/workshops"
+        }
+      ],
+      "web_url": "http://www.tripadvisor.com/Attraction_Review-g60745-d3546275-Reviews-mMCID-Diablo_Glass_School-Boston_Massachusetts.html",
+      "percent_recommended": null,
+      "location_string": "Boston, Massachusetts",
+      "location_id": "3546275",
+      "write_review": "http://www.tripadvisor.com/UserReview-g60745-d3546275-mMCID-Diablo_Glass_School-Boston_Massachusetts.html",
+      "api_detail_url": "http://api.tripadvisor.com/api/partner/2.0/location/3546275?key=<YOUR KEY HERE>",
+      "address_obj": {
+        "street1": "123 Terrace Street",
+        "street2": null,
+        "city": "Boston",
+        "state": "Massachusetts",
+        "country": "United States",
+        "postalcode": "02120",
+        "address_string": "123 Terrace Street, Boston, MA 02120"
+      },
+      "wikipedia_info": null,
+      "distance": ".25",
+      "category": {
+        "name": "attraction",
+        "localized_name": "Attraction"
+      },
+      "awards": [],
+      "subcategory": [
+        {
+          "name": "activities",
+          "localized_name": "Activities"
+        },
+        {
+          "name": "classes",
+          "localized_name": "Classes"
+        }
+      ],
+      "num_reviews": "1",
+      "rating_image_url": "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/5.0-MCID-5.png",
+      "name": "Diablo Glass School",
+      "ancestors": [
+        {
+          "abbrv": null,
+          "level": "City",
+          "name": "Boston",
+          "location_id": "60745"
+        },
+        {
+          "abbrv": "MA",
+          "level": "State",
+          "name": "Massachusetts",
+          "location_id": "28942"
+        },
+        {
+          "abbrv": null,
+          "level": "Country",
+          "name": "United States",
+          "location_id": "191"
+        }
+      ],
+      "bearing": "south",
+      "longitude": "-71.09837",
+      "rating": "5.0",
+      "latitude": "42.32788",
+      "ranking_data": {
+        "geo_location_id": "60745",
+        "ranking_string": "#95 of 139 activities in Boston",
+        "geo_location_name": "Boston",
+        "ranking_out_of": "139",
+        "ranking": "95"
+      }
+}
