@@ -22,7 +22,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        EditText editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+        final EditText editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         EditText editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         Button buttonRegister = (Button) findViewById(R.id.buttonRegister);
 
@@ -33,18 +33,36 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                UserManager um = new UserManager(getApplicationContext());
-                um.open();
+                User u = new User(mail,password,null);
 
-                um.AddUser(new User(mail,password,null));
+                if(u.emailValid() && u.passwordValid()){
+                    UserManager um = new UserManager(getApplicationContext());
+                    um.open();
 
-                um.close();
+                    um.AddUser(u);
 
-                Toast.makeText(getApplicationContext(), "ACCOUNT RESGISTERED",
-                        Toast.LENGTH_LONG).show();
+                    um.close();
 
-                Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
-                startActivity(intent);
+                    Toast.makeText(getApplicationContext(), "ACCOUNT RESGISTERED",
+                            Toast.LENGTH_LONG).show();
+
+                    Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
+                    startActivity(intent);
+                }
+                else if(!u.emailValid() && u.passwordValid()){
+                    Toast.makeText(getApplicationContext(), "INVALID EMAIL",
+                            Toast.LENGTH_LONG).show();
+                }
+                else if(u.emailValid()==true && !u.passwordValid()){
+                    Toast.makeText(getApplicationContext(), "INVALID PASSWORD",
+                            Toast.LENGTH_LONG).show();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "INVALID EMAIL AND PASSWORD",
+                            Toast.LENGTH_LONG).show();
+                }
+
+
             }
         });
 
