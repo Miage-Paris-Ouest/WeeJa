@@ -86,7 +86,10 @@ public class MenuActivity extends AppCompatActivity
         } else if (id == R.id.nav_favoris) {
             Intent i_fav = new Intent(getApplicationContext(),FavoriteActivity.class);
             startActivity(i_fav);
-        } else if (id == R.id.nav_deconnection) {
+        } else if (id == R.id.nav_historique) {
+            Intent i_histo = new Intent(getApplicationContext(),HistoryActivity.class);
+            startActivity(i_histo);
+        }else if (id == R.id.nav_deconnection) {
 
         }
 

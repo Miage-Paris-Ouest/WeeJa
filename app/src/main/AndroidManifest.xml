@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -55,7 +56,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="projet.holo_holo.weeja.controller_view.MenuActivity" />
         </activity>
-        <activity android:name=".controller_view.PackageWeekend"></activity>
+        <activity android:name=".controller_view.PackageWeekend" />
+
+        <service
+            android:name="com.paymill.android.service.PMService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity android:name=".controller_view.PaymentActivity" />
+        <activity android:name=".controller_view.HistoryActivity"></activity>
     </application>
 
 </manifest>

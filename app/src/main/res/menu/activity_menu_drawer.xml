@@ -15,6 +15,11 @@
             android:icon="@android:drawable/btn_star_big_on"
             android:title="Mes favoris" />
         <item
+            android:id="@+id/nav_historique"
+            android:icon="@android:drawable/btn_plus"
+            android:title="Mon historique"
+            />
+        <item
             android:id="@+id/nav_deconnection"
             android:icon="@android:drawable/ic_lock_power_off"
             android:title="Déconnexion" />
