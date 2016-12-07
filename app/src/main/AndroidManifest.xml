@@ -33,7 +33,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".controller_view.WeekendActivity"
-            android:label="Mon WeekEnd"
+            android:label="Mon Weekend"
             android:parentActivityName=".controller_view.MenuActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
@@ -56,7 +56,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="projet.holo_holo.weeja.controller_view.MenuActivity" />
         </activity>
-        <activity android:name=".controller_view.PackageWeekend" />
+        <activity
+            android:name=".controller_view.PackageWeekend"
+            android:label="Mon Weekend"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <service
             android:name="com.paymill.android.service.PMService"
@@ -64,7 +67,14 @@
             android:exported="false" />
 
         <activity android:name=".controller_view.PaymentActivity" />
-        <activity android:name=".controller_view.HistoryActivity"></activity>
+        <activity
+            android:name=".controller_view.HistoryActivity"
+            android:label="Mon Historique"
+            android:parentActivityName=".controller_view.MenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="projet.holo_holo.weeja.controller_view.MenuActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/package"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/imageViewHistory" />
+
+    <TextView
+        android:text="Mon Weekend du :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:layout_toRightOf="@+id/imageViewHistory"
+        android:layout_toEndOf="@+id/imageViewHistory" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_toRightOf="@+id/imageViewHistory"
+        android:id="@+id/textViewDate"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:text="à"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewDate"
+        android:layout_toEndOf="@+id/imageViewHistory"
+        android:id="@+id/textView7"
+        android:layout_toRightOf="@+id/imageViewHistory" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewDate"
+        android:layout_toRightOf="@+id/textView7"
+        android:layout_toEndOf="@+id/textView7"
+        android:layout_marginLeft="82dp"
+        android:layout_marginStart="82dp"
+        android:id="@+id/textViewDestination"
+        android:textColor="@android:color/holo_orange_dark" />
+
+</RelativeLayout>
