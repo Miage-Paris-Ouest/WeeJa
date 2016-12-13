@@ -19,7 +19,7 @@ public class PaymentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
         //PMManager.init(getApplicationContext(), PMService.ServiceMode.TEST, "yourpublickey",null, null);
-        //PMManager.addListener(listener);
+        //²²²PMManager.addListener(listener);
     }
     PMGenerateTokenListener listener = new PMGenerateTokenListener() {
         public void onGenerateTokenFailed(PMError error) {
