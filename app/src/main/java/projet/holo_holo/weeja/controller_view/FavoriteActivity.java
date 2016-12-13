@@ -1,7 +1,7 @@
 package projet.holo_holo.weeja.controller_view;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 

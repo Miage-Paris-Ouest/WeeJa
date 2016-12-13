@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_payment"
     android:layout_width="match_parent"
@@ -9,5 +10,149 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="projet.holo_holo.weeja.controller_view.PaymentActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/nomComplet"
+        android:layout_alignBaseline="@+id/nomCarte"
+        android:layout_alignBottom="@+id/nomCarte"
+        android:layout_toRightOf="@+id/numCarte"
+        android:layout_toEndOf="@+id/numCarte"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/dateNum"
+        android:layout_alignBaseline="@+id/dateCarte"
+        android:layout_alignBottom="@+id/dateCarte"
+        android:layout_alignLeft="@+id/nomComplet"
+        android:layout_alignStart="@+id/nomComplet" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/numCarteTxt"
+        android:layout_alignBaseline="@+id/numCarte"
+        android:layout_alignBottom="@+id/numCarte"
+        android:layout_alignLeft="@+id/dateNum"
+        android:layout_alignStart="@+id/dateNum" />
+
+    <Button
+        android:text="Valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:id="@+id/button_valider"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="cursive"
+        android:textSize="21sp" />
+
+    <TextView
+        android:text="Cryptogramme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cryptoCarte"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:layout_above="@+id/button_valider"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="55dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/cryptoNum"
+        android:layout_alignBaseline="@+id/cryptoCarte"
+        android:layout_alignBottom="@+id/cryptoCarte"
+        android:layout_alignLeft="@+id/dateNum"
+        android:layout_alignStart="@+id/dateNum" />
+
+    <TextView
+        android:text="Numero de Carte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numCarte"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:layout_above="@+id/dateNum"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="22dp" />
+
+    <TextView
+        android:text="Nom Complet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nomCarte"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:layout_above="@+id/numCarteTxt"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="22dp" />
+
+    <TextView
+        android:text="Payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="cursive"
+        android:textSize="30sp"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/mastercard_logo"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/imageView3"
+        android:layout_above="@+id/nomComplet"
+        android:layout_alignLeft="@+id/nomComplet"
+        android:layout_alignStart="@+id/nomComplet" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logocb"
+        android:id="@+id/imageView5"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_toRightOf="@+id/button_valider"
+        android:layout_toEndOf="@+id/button_valider"
+        android:layout_marginLeft="13dp"
+        android:layout_marginStart="13dp" />
+
+    <TextView
+        android:text="Date d'expiration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateCarte"
+        android:fontFamily="cursive"
+        android:textSize="18sp"
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="17dp"
+        android:layout_above="@+id/cryptoNum"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 
 </RelativeLayout>
