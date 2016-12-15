@@ -55,7 +55,7 @@ public class User {
     }
 
     public Boolean passwordValid(){
-        if(this.password.length() > 4){
+        if(this.password.length() >= 4){
             return true;
         }
         else{

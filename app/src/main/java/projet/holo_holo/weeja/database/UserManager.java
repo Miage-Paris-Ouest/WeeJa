@@ -77,7 +77,6 @@ public class UserManager {
     }
 
     public User getUser(String email) {
-        // Retourne l'animal dont l'id est passé en paramètre
 
         User u = new User();
 

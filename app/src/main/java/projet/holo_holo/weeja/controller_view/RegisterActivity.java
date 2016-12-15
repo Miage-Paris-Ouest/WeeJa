@@ -17,50 +17,59 @@ import projet.holo_holo.weeja.model.User;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    UserManager um = new UserManager(this);
+    EditText editTextEmail;
+    EditText editTextPassword;
+    Button buttonRegister;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        final EditText editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        EditText editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        Button buttonRegister = (Button) findViewById(R.id.buttonRegister);
-
-        final String mail = editTextEmail.getText().toString();
-        final String password = editTextPassword.getText().toString();
+        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
+        buttonRegister = (Button) findViewById(R.id.buttonRegister);
 
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                String mail = editTextEmail.getText().toString();
+                String password = editTextPassword.getText().toString();
+
                 User u = new User(mail,password,null);
 
                 if(u.emailValid() && u.passwordValid()){
-                    UserManager um = new UserManager(getApplicationContext());
                     um.open();
-
-                    um.AddUser(u);
-
+                    long valid =um.AddUser(u);
                     um.close();
 
-                    Toast.makeText(getApplicationContext(), "ACCOUNT RESGISTERED",
-                            Toast.LENGTH_LONG).show();
+                    if(valid == -1){
+                        Toast.makeText(getApplicationContext(), "USER ALREADY REGISTERED",
+                                Toast.LENGTH_LONG).show();
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(), "ACCOUNT RESGISTERED",
+                                Toast.LENGTH_LONG).show();
 
-                    Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
-                    startActivity(intent);
+                        Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
+                        startActivity(intent);
+                    }
                 }
                 else if(!u.emailValid() && u.passwordValid()){
                     Toast.makeText(getApplicationContext(), "INVALID EMAIL",
                             Toast.LENGTH_LONG).show();
                 }
-                else if(u.emailValid()==true && !u.passwordValid()){
-                    Toast.makeText(getApplicationContext(), "INVALID PASSWORD",
+                else if(u.emailValid() && !u.passwordValid()){
+                    Toast.makeText(getApplicationContext(), "INVALID PASSWORD : LENGTH < 4",
                             Toast.LENGTH_LONG).show();
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "INVALID EMAIL AND PASSWORD",
                             Toast.LENGTH_LONG).show();
                 }
+
 
 
             }

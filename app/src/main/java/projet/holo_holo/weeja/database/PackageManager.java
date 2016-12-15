@@ -28,7 +28,7 @@ public class PackageManager {
             " (" +
             " "+ID+" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
             " "+DATE+" DATETIME," +
-            " "+USER+" VARCHAR," +
+            " "+USER+" VARCHAR" +
             ");";
     private MySQLite maBaseSQLite; // notre gestionnaire du fichier SQLite
     private SQLiteDatabase db;

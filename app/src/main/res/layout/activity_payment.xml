@@ -15,7 +15,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
         android:ems="10"
         android:id="@+id/nomComplet"
         android:layout_alignBaseline="@+id/nomCarte"
@@ -46,30 +45,6 @@
         android:layout_alignBottom="@+id/numCarte"
         android:layout_alignLeft="@+id/dateNum"
         android:layout_alignStart="@+id/dateNum" />
-
-    <Button
-        android:text="Valider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:id="@+id/button_valider"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="cursive"
-        android:textSize="21sp" />
-
-    <TextView
-        android:text="Cryptogramme"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cryptoCarte"
-        android:fontFamily="cursive"
-        android:textSize="20sp"
-        android:textColor="@color/colorAccent"
-        android:layout_above="@+id/button_valider"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="55dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -123,23 +98,14 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/mastercard_logo"
-        android:layout_marginBottom="30dp"
-        android:id="@+id/imageView3"
-        android:layout_above="@+id/nomComplet"
-        android:layout_alignLeft="@+id/nomComplet"
-        android:layout_alignStart="@+id/nomComplet" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:src="@drawable/logocb"
         android:id="@+id/imageView5"
         android:layout_alignBottom="@+id/imageView3"
         android:layout_toRightOf="@+id/button_valider"
         android:layout_toEndOf="@+id/button_valider"
         android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp" />
+        android:layout_marginStart="13dp"
+        android:layout_alignTop="@+id/title" />
 
     <TextView
         android:text="Date d'expiration"
@@ -153,6 +119,42 @@
         android:layout_above="@+id/cryptoNum"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mastercard_logo"
+        android:id="@+id/imageView3"
+        android:layout_alignTop="@+id/title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Cryptogramme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cryptoCarte"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:textColor="@color/colorAccent"
+        android:layout_marginBottom="56dp"
+        android:layout_above="@+id/button_valider"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:id="@+id/button_valider"
+        android:textSize="14sp"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/background_light"
+        android:fontFamily="sans-serif-medium"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/title"
+        android:layout_alignEnd="@+id/title" />
 
 
 </RelativeLayout>
