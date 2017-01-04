@@ -28,7 +28,7 @@
         android:layout_height="210dp"
         android:id="@+id/cadeau"
         android:layout_gravity="center_vertical"
-        android:src="@drawable/cadeau"/>
+        android:src="@drawable/flechepackage"/>
 
     <TextView
         android:text="Discover Your Weekend"

@@ -69,6 +69,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     private View mProgressView;
     private View mLoginFormView;
 
+    UserManager um = new UserManager(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -94,15 +96,24 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*UserManager um = new UserManager(getApplicationContext());
 
-                if(um.getUser(mEmailView.getText().toString())==null){
-                    Toast.makeText(getApplicationContext(), "INVALID EMAIL OR PASSWORD",
+                /*String email = mEmailView.getText().toString();
+                String password = mPasswordView.getText().toString();
+
+                if(um.getUser(email).getEmail().equals("") && um.getUser(email).getEmail() == null ){
+                    Toast.makeText(getApplicationContext(), "INVALID EMAIL",
                             Toast.LENGTH_LONG).show();
                 }
-                else {*/
-                attemptLogin();
-                //}
+                else {
+                    if(um.getUser(email).getPassword().equals(password)){*/
+                        attemptLogin();
+                    /*}
+                    else{
+                        Toast.makeText(getApplicationContext(), "INVALID PASSWORD",
+                                Toast.LENGTH_LONG).show();
+                    }
+
+                }*/
             }
         });
 
