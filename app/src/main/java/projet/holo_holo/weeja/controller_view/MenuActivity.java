@@ -1,6 +1,11 @@
 package projet.holo_holo.weeja.controller_view;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -37,6 +42,27 @@ public class MenuActivity extends AppCompatActivity
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        NotificationManager notif;
+        notif = (NotificationManager) getApplicationContext().getSystemService(getApplicationContext().NOTIFICATION_SERVICE);
+
+        Notification notification = new Notification(R.drawable.avion, "OFFRE SPECIALE!!!", System.currentTimeMillis());
+        Intent notificationIntent = new Intent(this,PackageWeekend.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+
+        Notification.Builder builder = new Notification.Builder(getApplicationContext());
+        builder
+                .setSmallIcon(R.drawable.avion)
+                .setContentTitle("OFFRE SPECIALE WEEJA")
+                .setContentText("Venez profofiter d'une offre personnalisée !!!")
+                .setAutoCancel(true);
+
+
+        NotificationManager notificationManager =
+                (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            notificationManager.notify(1, builder.build());
+        }
     }
 
     @Override

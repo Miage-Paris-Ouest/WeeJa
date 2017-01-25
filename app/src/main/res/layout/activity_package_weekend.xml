@@ -12,7 +12,7 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="300dp"
         android:id="@+id/listViewPackage"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -27,4 +27,16 @@
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/background_light"
         android:background="@color/colorAccent" />
+
+    <TextView
+        android:text="Price : 370 E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonValidateWeekend"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/textView5"
+        android:fontFamily="serif"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
 </RelativeLayout>

@@ -28,7 +28,7 @@ public class HistoryActivity extends AppCompatActivity {
 
         map.put("Date", "01/12/2016");
         map.put("Destination", "à  Boston");
-        map.put("Image", String.valueOf(R.drawable.favoriko));
+        map.put("Image", String.valueOf(R.drawable.favoriok));
 
         listItem.add(map);
 
@@ -44,7 +44,7 @@ public class HistoryActivity extends AppCompatActivity {
 
         map.put("Date", "23/09/2016");
         map.put("Destination", "à  New York");
-        map.put("Image", String.valueOf(R.drawable.favoriko));
+        map.put("Image", String.valueOf(R.drawable.favoriok));
 
         listItem.add(map);
 
@@ -68,7 +68,7 @@ public class HistoryActivity extends AppCompatActivity {
 
         map.put("Date", "23/12/2015");
         map.put("Destination", "à  Helsinki");
-        map.put("Image", String.valueOf(R.drawable.favoriko));
+        map.put("Image", String.valueOf(R.drawable.favoriok));
 
         listItem.add(map);
 
