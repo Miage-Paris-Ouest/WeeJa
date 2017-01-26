@@ -80,7 +80,7 @@ public class UserManager {
 
         User u = new User();
 
-        Cursor c = db.rawQuery("SELECT * FROM "+TABLE_NAME+" WHERE "+EMAIL+"="+email, null);
+        Cursor c = db.rawQuery("SELECT * FROM "+TABLE_NAME+" WHERE "+EMAIL+" LIKE "+"'"+email+"'", null);
         if (c.moveToFirst()) {
             u.setEmail(c.getString(c.getColumnIndex(EMAIL)));
             u.setPassword(c.getString(c.getColumnIndex(PASSWORD)));

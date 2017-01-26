@@ -42,27 +42,6 @@ public class MenuActivity extends AppCompatActivity
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        NotificationManager notif;
-        notif = (NotificationManager) getApplicationContext().getSystemService(getApplicationContext().NOTIFICATION_SERVICE);
-
-        Notification notification = new Notification(R.drawable.avion, "OFFRE SPECIALE!!!", System.currentTimeMillis());
-        Intent notificationIntent = new Intent(this,PackageWeekend.class);
-        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
-
-        Notification.Builder builder = new Notification.Builder(getApplicationContext());
-        builder
-                .setSmallIcon(R.drawable.avion)
-                .setContentTitle("OFFRE SPECIALE WEEJA")
-                .setContentText("Venez profofiter d'une offre personnalisée !!!")
-                .setAutoCancel(true);
-
-
-        NotificationManager notificationManager =
-                (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            notificationManager.notify(1, builder.build());
-        }
     }
 
     @Override

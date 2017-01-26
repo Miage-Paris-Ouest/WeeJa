@@ -97,23 +97,27 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             @Override
             public void onClick(View view) {
 
-                /*String email = mEmailView.getText().toString();
+                String email = mEmailView.getText().toString();
                 String password = mPasswordView.getText().toString();
 
-                if(um.getUser(email).getEmail().equals("") && um.getUser(email).getEmail() == null ){
-                    Toast.makeText(getApplicationContext(), "INVALID EMAIL",
+                um.open();
+
+                if(um.getUser(email) == null){
+                    Toast.makeText(getApplicationContext(), "INVALID EMAIL OR PASSWORD",
                             Toast.LENGTH_LONG).show();
                 }
                 else {
-                    if(um.getUser(email).getPassword().equals(password)){*/
-                        attemptLogin();
-                    /*}
-                    else{
-                        Toast.makeText(getApplicationContext(), "INVALID PASSWORD",
+                    if(!um.getUser(email).getPassword().equals(password)){
+                        Toast.makeText(getApplicationContext(), "INVALID PASSWORD FOR THIS USER",
                                 Toast.LENGTH_LONG).show();
                     }
+                    else{
+                        attemptLogin();
+                    }
 
-                }*/
+                }
+
+                um.close();
             }
         });
 
