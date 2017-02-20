@@ -33,7 +33,7 @@
         android:textStyle="normal|bold" />
 
     <TextView
-        android:text="Destination :"
+        android:text="Destination Favorite :"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textViewDestination"
@@ -61,18 +61,18 @@
         android:id="@+id/editTextBudget"
         android:layout_alignBaseline="@+id/textViewBudget"
         android:layout_alignBottom="@+id/textViewBudget"
-        android:layout_alignRight="@+id/editText3"
-        android:layout_alignEnd="@+id/editText3"
+        android:layout_alignRight="@+id/editTextDestination"
+        android:layout_alignEnd="@+id/editTextDestination"
         android:layout_toEndOf="@+id/textViewMonCompte"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_alignStart="@+id/editText3" />
+        android:layout_alignLeft="@+id/editTextDestination"
+        android:layout_alignStart="@+id/editTextDestination" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText3"
+        android:id="@+id/editTextDestination"
         android:layout_alignBaseline="@+id/textViewDestination"
         android:layout_alignBottom="@+id/textViewDestination"
         android:layout_alignRight="@+id/editTextNbEnfants"

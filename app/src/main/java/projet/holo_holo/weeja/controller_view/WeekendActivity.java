@@ -13,6 +13,8 @@ import projet.holo_holo.weeja.R;
 
 public class WeekendActivity extends AppCompatActivity {
 
+    String email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,12 +23,15 @@ public class WeekendActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        email = this.getIntent().getStringExtra("EMAIL");
+
         ImageView imageWeekend = (ImageView) findViewById(R.id.cadeau);
 
         imageWeekend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WeekendActivity.this,PackageWeekend.class);
+                intent.putExtra("EMAIL",email);
                 startActivity(intent);
             }
         });

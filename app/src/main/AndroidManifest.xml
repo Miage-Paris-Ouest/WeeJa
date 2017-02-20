@@ -16,6 +16,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".controller_view.MainActivity"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,14 +26,17 @@
         </activity>
         <activity
             android:name=".controller_view.LoginActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_login" />
-        <activity android:name=".controller_view.RegisterActivity" />
+        <activity android:name=".controller_view.RegisterActivity" android:screenOrientation="portrait" />
         <activity
             android:name=".controller_view.MenuActivity"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".controller_view.WeekendActivity"
+            android:screenOrientation="portrait"
             android:label="Mon Weekend"
             android:parentActivityName=".controller_view.MenuActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -42,6 +46,7 @@
         </activity>
         <activity
             android:name=".controller_view.AccountActivity"
+            android:screenOrientation="portrait"
             android:label="Mon Compte"
             android:parentActivityName=".controller_view.MenuActivity">
             <meta-data
@@ -50,6 +55,7 @@
         </activity>
         <activity
             android:name=".controller_view.FavoriteActivity"
+            android:screenOrientation="portrait"
             android:label="Mes Favoris"
             android:parentActivityName=".controller_view.MenuActivity">
             <meta-data
@@ -58,6 +64,7 @@
         </activity>
         <activity
             android:name=".controller_view.PackageWeekend"
+            android:screenOrientation="portrait"
             android:label="Mon Weekend"
             android:theme="@style/AppTheme.NoActionBar" />
 
@@ -69,6 +76,7 @@
         <activity android:name=".controller_view.PaymentActivity" />
         <activity
             android:name=".controller_view.HistoryActivity"
+            android:screenOrientation="portrait"
             android:label="Mon Historique"
             android:parentActivityName=".controller_view.MenuActivity">
             <meta-data

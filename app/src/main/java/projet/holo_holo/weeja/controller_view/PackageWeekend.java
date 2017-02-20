@@ -1,9 +1,11 @@
 package projet.holo_holo.weeja.controller_view;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -60,6 +62,29 @@ public class PackageWeekend extends AppCompatActivity {
 
         listePackage.setAdapter(mSchedule);
 
+        listePackage.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+
+                if(position == 0){
+                    Uri uri = Uri.parse("http://www.tripadvisor.com/Hotel_Review-g60745-d77638-Reviews-mMCID-The_Inn_at_Longwood_Medical-Boston_Massachusetts.html");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+                }
+                else if(position == 1){
+                    Uri uri = Uri.parse("http://www.tripadvisor.com/Restaurant_Review-g60745-d4225110-Reviews-mMCID-Chacho_s_Pizza_Subs-Boston_Massachusetts.html");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+                }
+                else if(position == 2){
+                    Uri uri = Uri.parse("http://www.tripadvisor.com/Attraction_Review-g60745-d3546275-Reviews-mMCID-Diablo_Glass_School-Boston_Massachusetts.html");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(intent);
+                }
+
+            }
+        });
+
         buttonPayer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,6 +92,8 @@ public class PackageWeekend extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 
 }
+

@@ -68,6 +68,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    String email;
+    String password;
 
     UserManager um = new UserManager(this);
 
@@ -97,16 +99,20 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             @Override
             public void onClick(View view) {
 
-                String email = mEmailView.getText().toString();
-                String password = mPasswordView.getText().toString();
+                email = mEmailView.getText().toString();
+                password = mPasswordView.getText().toString();
 
                 um.open();
 
-                if(um.getUser(email) == null){
-                    Toast.makeText(getApplicationContext(), "INVALID EMAIL OR PASSWORD",
+                User u = new User();
+                u = um.getUser(email);
+
+
+                if(u.getEmail()==null){
+                    Toast.makeText(getApplicationContext(), "INVALID USER",
                             Toast.LENGTH_LONG).show();
                 }
-                else {
+                else if(um.getUser(email)!= null){
                     if(!um.getUser(email).getPassword().equals(password)){
                         Toast.makeText(getApplicationContext(), "INVALID PASSWORD FOR THIS USER",
                                 Toast.LENGTH_LONG).show();
@@ -220,6 +226,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 mAuthTask.execute((Void) null);
 
                 Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                intent.putExtra("EMAIL",email);
                 startActivity(intent);
             }
     }

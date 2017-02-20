@@ -27,6 +27,8 @@ public class MenuActivity extends AppCompatActivity
     private Toolbar toolbar;
     private DrawerLayout drawer;
     private NavigationView navigationView;
+    String email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +44,8 @@ public class MenuActivity extends AppCompatActivity
 
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        email =  this.getIntent().getStringExtra("EMAIL");
     }
 
     @Override
@@ -84,15 +88,19 @@ public class MenuActivity extends AppCompatActivity
 
         if (id == R.id.nav_weekend) {
             Intent i_weekend = new Intent(getApplicationContext(),WeekendActivity.class);
+            i_weekend.putExtra("EMAIL",email);
             startActivity(i_weekend);
         } else if (id == R.id.nav_compte) {
             Intent i_acc = new Intent(getApplicationContext(),AccountActivity.class);
+            i_acc.putExtra("EMAIL",email);
             startActivity(i_acc);
         } else if (id == R.id.nav_favoris) {
             Intent i_fav = new Intent(getApplicationContext(),FavoriteActivity.class);
+            i_fav.putExtra("EMAIL",email);
             startActivity(i_fav);
         } else if (id == R.id.nav_historique) {
             Intent i_histo = new Intent(getApplicationContext(),HistoryActivity.class);
+            i_histo.putExtra("EMAIL",email);
             startActivity(i_histo);
         }else if (id == R.id.nav_deconnection) {
 

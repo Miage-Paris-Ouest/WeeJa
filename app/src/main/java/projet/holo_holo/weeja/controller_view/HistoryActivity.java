@@ -14,11 +14,15 @@ import projet.holo_holo.weeja.R;
 
 public class HistoryActivity extends AppCompatActivity {
 
+    String email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
         ListView listeHistorique = (ListView) findViewById(R.id.listViewHistory);
+
+        email =  this.getIntent().getStringExtra("EMAIL");
 
         ArrayList<HashMap<String, String>> listItem = new ArrayList<HashMap<String, String>>();
 

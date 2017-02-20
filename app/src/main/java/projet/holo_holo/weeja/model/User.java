@@ -10,6 +10,12 @@ public class User {
 
     private String email;
     private String password;
+    private int nbEnfants;
+    private int celibataire;
+    private int budget;
+    private String destinationFavorite;
+
+
     private HashSet<Favorite> listeFavorites;
 
     public User(String email, String password, HashSet<Favorite> listeFavorites) {
@@ -19,6 +25,40 @@ public class User {
     }
 
     public User() {
+    }
+
+    public void setDestinatioFavorite(String destinatioFavorite) {
+        this.destinationFavorite = destinatioFavorite;
+    }
+
+    public String getDestinatioFavorite() {
+
+        return destinationFavorite;
+    }
+
+    public void setNbEnfants(int nbEnfants) {
+        this.nbEnfants = nbEnfants;
+    }
+
+    public void setCelibataire(int celibataire) {
+        this.celibataire = celibataire;
+    }
+
+    public void setBudget(int budget) {
+        this.budget = budget;
+    }
+
+    public int getNbEnfants() {
+
+        return nbEnfants;
+    }
+
+    public int getCelibataire() {
+        return celibataire;
+    }
+
+    public int getBudget() {
+        return budget;
     }
 
     public void setEmail(String email) {
@@ -55,7 +95,7 @@ public class User {
     }
 
     public Boolean passwordValid(){
-        if(this.password.length() >= 4){
+        if(this.password.length() > 4){
             return true;
         }
         else{
