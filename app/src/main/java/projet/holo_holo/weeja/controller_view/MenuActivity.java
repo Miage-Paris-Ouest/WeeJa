@@ -5,6 +5,8 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -28,6 +30,7 @@ public class MenuActivity extends AppCompatActivity
     private DrawerLayout drawer;
     private NavigationView navigationView;
     String email;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +48,39 @@ public class MenuActivity extends AppCompatActivity
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        context = getApplicationContext();
+
         email =  this.getIntent().getStringExtra("EMAIL");
+
+
+        Bitmap notificationLargeIconBitmap = BitmapFactory.decodeResource(
+                context.getResources(),
+                R.drawable.avionclef);
+
+
+        NotificationManager notif;
+        notif = (NotificationManager) getApplicationContext().getSystemService(getApplicationContext().NOTIFICATION_SERVICE);
+
+        //Notification notification = new Notification(R.drawable.avion, "OFFRE SPECIALE!!!", System.currentTimeMillis());
+        Intent intent = new Intent(getApplicationContext(),PackageWeekend.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
+                intent, 0);
+
+        Notification.Builder builder = new Notification.Builder(getApplicationContext());
+        builder
+                .setSmallIcon(R.drawable.avionclef)
+                //.setLargeIcon(notificationLargeIconBitmap)
+                .setContentTitle("OFFRE SPECIALE WEEJA")
+                .setContentText("Profitez-en dès maintenant !!!")
+                .setContentIntent(contentIntent)
+                .setAutoCancel(true);
+
+
+        NotificationManager notificationManager =
+                (NotificationManager) getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            notificationManager.notify(1, builder.build());
+        }
     }
 
     @Override
@@ -103,7 +138,8 @@ public class MenuActivity extends AppCompatActivity
             i_histo.putExtra("EMAIL",email);
             startActivity(i_histo);
         }else if (id == R.id.nav_deconnection) {
-
+            Intent i_accueil = new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(i_accueil);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
